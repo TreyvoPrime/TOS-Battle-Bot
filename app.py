@@ -13,11 +13,10 @@ def home():
 def terms():
     return render_template("tos.html")
 
-# (Optional) Privacy route if you add it later
 @app.route("/privacy")
 def privacy():
-    return "Privacy Policy coming soon."
-
+    return render_template("privacy.html")
+    
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 3000))
     app.run(host="0.0.0.0", port=port)
